@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            *,
+            *::after,
+            *::before {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                min-height: 100vh;
+                background: gainsboro;
+                font-family: sans-serif;
+                padding: 50px;
+            }
+            h1{
+                padding: 20px 0;
+                text-align: center;
+                font-size: 50px;
+            }
+            .elements{
+                display: flex;
+                flex-wrap: wrap;
+                
+                align-items: center;
+                gap: 20px;
+
+            }
+            .elements svg{
+                border: 1px solid gray;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            
+        </h1>
+        <div class="elements">
+            <svg width="200" height="400" viewBox="-100 -200 200 400">
+                <polygon points="0,0 80,120 -80,120"  fill="red"/>
+            </svg>
+            <svg width="200" height="400" viewBox="-100 -200 200 400">
+                <polygon points="0,0 80,120 -100,-40"  fill="red"/>
+            </svg>
+            <svg width="200" height="400" viewBox="-100 -200 200 400">
+                <polygon points="0,0 80,120 -80,120"  fill="#234236"/>
+                <polygon points="0,-40 60,60 -60,60"  fill="#0C5C4C"/>
+                <polygon points="0,-80 40,0 -40,0"  fill="#38755B"/>
+                <rect width="40" height="30" fill="brown" x="-20" y="120" />
+            </svg>
+        </div>
+    </body>
+</html>
