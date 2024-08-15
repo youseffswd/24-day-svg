@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            *,
+            *::after,
+            *::before {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                min-height: 100vh;
+                background: gainsboro;
+                font-family: sans-serif;
+                padding: 50px;
+            }
+            h1 {
+                padding: 20px 0;
+                text-align: center;
+                font-size: 50px;
+            }
+            .elements {
+                display: flex;
+                flex-wrap: wrap;
+
+                align-items: center;
+                gap: 20px;
+            }
+            .elements svg {
+                border: 1px solid gray;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Day 5</h1>
+        <div class="elements">
+            <svg width="200" height="200" viewBox="-100 -100 200 200">
+                <path
+                    d="M -40,-40 
+                        L 40,-40
+                        M -40,0
+                        L 40,0
+                        M -40,40
+                        L 40,40
+                "
+                    stroke="#333"
+                    stroke-width="25"
+                    stroke-linecap="round"
+                />
+                <!-- 
+                    M = Move to
+                    L = Line to
+                
+                    Here we only have the two most basic commands, move-to and line-to.
+                    The move-to command moves the cursor to a point without drawing a line and
+                    the line-to command draws a straight line from the previous point.
+                    A command always continues the previous command. When we draw a line
+                    we only define the endpoint.
+                    The starting point will be the previous command’s endpoint.
+                -->
+            </svg>
+            <svg width="200" height="200" viewBox="-100 -100 200 200">
+                <text x="-50" y="-50" font-size="20" fill="black">Gaza</text>
+                <path d=" M -30 -20 L 0 10 L 30 -20" fill="red" />
+                <text x="-50" y="50" font-size="20" fill="black">Here</text>
+            </svg>
+            <svg width="200" height="200" viewBox="-100 -100 200 200">
+                <path
+                    d=" M -30 -20 L 0 10 L 30 -20"
+                    fill="none"
+                    stroke="red"
+                    stroke-width="80"
+                    stroke-linecap="round"
+                />
+            </svg>
+            <svg width="200" height="200" viewBox="-100 -100 200 200">
+                <path
+                    d=" M -30 -20 L 0 10 L 30 -20"
+                    fill="none"
+                    stroke="red"
+                    stroke-width="10"
+                    stroke-linecap="round"
+                />
+            </svg>
+            <!-- Excercise -->
+            <svg width="200" height="200" viewBox="-100 -100 200 200">
+                <path
+                    d="
+                       M -30,-30
+                       L -30,-10
+                       M -30,-30
+                       L -10,-30
+
+
+                       M 30,-30
+                       L 30,-10
+                       M 30,-30
+                       L 10,-30
+
+
+                       M 30,30
+                       L 30,10
+                       M 30,30
+                       L 10,30
+
+
+                       M -30,30
+                       L -30,10
+                       M -30,30
+                       L -10,30
+
+
+                "
+                    fill="none"
+                    stroke="#D1495B"
+                    stroke-width="2"
+                />
+            </svg>
+            <!-- Excercise -->
+            <svg width="200" height="200" viewBox="-100 -100 200 200">
+                <path
+                    d="
+                M -70 0
+                L 70 0
+                L 30 -50
+                M 70 0
+                L 30 50
+                "
+                    fill="none"
+                    stroke="#D1495B"
+                    stroke-width="25"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </svg>
+        </div>
+    </body>
+</html>
