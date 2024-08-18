@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            *,
+            *::after,
+            *::before {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                min-height: 100vh;
+                background: gainsboro;
+                font-family: sans-serif;
+                padding: 50px;
+            }
+            h1 {
+                padding: 20px 0;
+                text-align: center;
+                font-size: 50px;
+            }
+            .elements {
+                display: flex;
+                flex-wrap: wrap;
+
+                align-items: center;
+                gap: 20px;
+            }
+            .elements svg {
+                border: 1px solid gray;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Day 6</h1>
+        <div class="elements">
+            <svg width="200" height="200" viewBox="-100 -100 200 200">
+                <g transform="translate(0 5)">
+                    <g>
+                        <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+                        <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+                    </g>
+                    <g transform="rotate(-72)">
+                        <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+                        <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+                    </g>
+                    <g transform="rotate(72)">
+                        <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+                        <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+                    </g>
+                    <g transform="rotate(144)">
+                        <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+                        <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+                    </g>
+
+                    <g transform="rotate(-144)">
+                        <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+                        <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </body>
+</html>

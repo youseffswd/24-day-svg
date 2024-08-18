@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            *,
+            *::after,
+            *::before {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                min-height: 100vh;
+                background: gainsboro;
+                font-family: sans-serif;
+                padding: 50px;
+            }
+            h1 {
+                padding: 20px 0;
+                text-align: center;
+                font-size: 50px;
+            }
+            .elements {
+                display: flex;
+                flex-wrap: wrap;
+
+                align-items: center;
+                gap: 20px;
+            }
+            .elements svg {
+                border: 1px solid gray;
+            }
+            line{
+                transition: transform 1s linear;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Day 7</h1>
+        <div class="elements">
+            <svg width="200" height="200" viewBox="-100 -100 200 200">
+                <rect
+                    x="-100"
+                    y="-100"
+                    width="200"
+                    height="200"
+                    fill="#CD803D"
+                />
+                <circle
+                    cx="0"
+                    cy="0"
+                    r="55"
+                    fill="white"
+                    stroke="#FCCE7B"
+                    stroke-width="10"
+                />
+
+                <circle
+                    r="45"
+                    fill="none"
+                    stroke="red"
+                    stroke-width="6"
+                    stroke-dasharray="6 17.56194490192345"
+                    stroke-dashoffset="3"
+                />
+
+                <g stroke="#5f4c6c" stroke-linecap="round">
+                    <line id="hours" y2="-20" stroke-width="4" />
+                    <line id="minutes" y2="-35" stroke-width="3" />
+                    <line id="seconds" y2="-45" stroke-width="1" />
+                </g>
+            </svg>
+        </div>
+        <script>
+            const hoursElement = document.getElementById("hours");
+            const minutesElement = document.getElementById("minutes");
+            const secondsElement = document.getElementById("seconds");
+
+            setInterval(() => {
+                const hour = new Date().getHours() % 12;
+                const minute = new Date().getMinutes();
+                const second = new Date().getSeconds();
+
+                hoursElement.setAttribute(
+                    "transform",
+                    `rotate(${(hour + minute / 60) * 30})`
+                );
+                minutesElement.setAttribute("transform", `rotate(${minute * 6})`);
+                secondsElement.setAttribute("transform", `rotate(${second * 6})`);
+
+            },500);
+        </script>
+    </body>
+</html>
