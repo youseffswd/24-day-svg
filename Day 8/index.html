@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            *,
+            *::after,
+            *::before {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                min-height: 100vh;
+                background: gainsboro;
+                font-family: sans-serif;
+                padding: 50px;
+            }
+            h1 {
+                padding: 20px 0;
+                text-align: center;
+                font-size: 50px;
+            }
+            .elements {
+                display: flex;
+                flex-wrap: wrap;
+
+                align-items: center;
+                gap: 20px;
+            }
+            .elements svg {
+                border: 1px solid gray;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Day 8</h1>
+        <div class="elements">
+            <svg width="200" height="200" viewBox="-100 -100 200 200">
+                <circle cx="0" cy="0" r="40" />
+                <line
+                    x1="0"
+                    x2="0"
+                    y1="60"
+                    y2="90"
+                    stroke="black"
+                    stroke-width="10"
+                    stroke-linecap="round"
+                    id="ray"
+                />
+                <use href="#ray" transform="rotate(45)" />
+                <use href="#ray" transform="rotate(90)" />
+                <use href="#ray" transform="rotate(135)" />
+                <use href="#ray" transform="rotate(180)" />
+                <use href="#ray" transform="rotate(225)" />
+                <use href="#ray" transform="rotate(270)" />
+                <use href="#ray" transform="rotate(315)" />
+                <use href="#ray" transform="rotate(360)" />
+            </svg>
+            <svg width="200" height="200" viewbox="-100 -100 200 200">
+                <path
+                    d="M 0 0 L 0 -90
+                       M 0 -20 L 20 -34 
+                       M 0 -20 L -20 -34
+                       M 0 -40 L 20 -54
+                       M 0 -40 L -20 -54
+                       M 0 -60 L 20 -74
+                       M 0 -60 L -20 -74
+                    "
+                    id="branch"
+                    stroke="#E5C39C"
+                    stroke-width="5"
+                />
+                <use href="#branch" transform="rotate(60)" />
+                <use href="#branch" transform="rotate(120)" />
+                <use href="#branch" transform="rotate(180)" />
+                <use href="#branch" transform="rotate(240)" />
+                <use href="#branch" transform="rotate(300)" />
+            </svg>
+        </div>
+    </body>
+</html>
