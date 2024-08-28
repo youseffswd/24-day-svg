@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            *,
+            *::after,
+            *::before {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                min-height: 100vh;
+                background: gainsboro;
+                font-family: sans-serif;
+                padding: 50px;
+            }
+            h1 {
+                padding: 20px 0;
+                text-align: center;
+                font-size: 50px;
+            }
+            .elements {
+                display: flex;
+                flex-wrap: wrap;
+
+                align-items: center;
+                gap: 20px;
+            }
+            .elements svg {
+                border: 1px solid gray;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Day 9</h1>
+        <div class="elements">
+            <svg width="200" height="200" viewBox="-100 -100 200 200">
+                <defs>
+                    <g id="tree">
+                        <polygon points="-10,0 10,0 0 -50" fill="#38755b" />
+                        <line
+                            x1="0"
+                            y1="0"
+                            x2="0"
+                            y2="10"
+                            stroke="#778074"
+                            stroke-width="2"
+                        />
+                    </g>
+                </defs>
+
+                <rect
+                    x="-100"
+                    y="-100"
+                    width="200"
+                    height="200"
+                    fill="#F1DBC3"
+                />
+                <circle r="350" cx="0" cy="380" fill="#F8F4E8" />
+                <use href="#tree" x="-30" y="25" transform="scale(2)" />
+                <use href="#tree" x="-20" y="40" transform="scale(1.2)" />
+                <use href="#tree" x="40" y="40" />
+                <use href="#tree" x="50" y="30" transform="scale(1.5)" />
+            </svg>
+        </div>
+    </body>
+</html>
